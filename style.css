@@ -1,0 +1,84 @@
+:root {
+  --first-color: #ff6b6b;
+  --first-color-light: #ff8787;
+  --first-color-dark: #e85959;
+  --second-color: #48dbfb;
+  --second-color-light: #64e1f7;
+  --second-color-dark: #38a3c2;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.stopwatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: linear-gradient(
+    150deg,
+    var(--first-color-dark),
+    var(--second-color-dark)
+  );
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.stopwatch p {
+  margin: 5px 0;
+  font-size: 25px;
+}
+
+.stopwatch h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-top: 30px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--second-color);
+  box-shadow: 0px 0px 0px 5px var(--first-color);
+  outline: none;
+}
+
+.memo {
+  display: none;
+}
+
+.stopTime {
+  visibility: hidden;
+}
+
+.show {
+  display: block;
+}
